@@ -7,6 +7,8 @@ import BaseController from './BaseController';
 export default class UserController extends BaseController {
   model = userModel;
 
+  
+
   login = (req, res) => {
     this.model.findOne({ email: req.body.email }, (err, user) => {
       if (!user) { return res.sendStatus(403); }

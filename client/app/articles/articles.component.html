@@ -22,8 +22,8 @@
       <tbody *ngIf="!isEditing">
         <tr *ngFor="let article of articles">
           <td>{{ article.name }}</td>
-          <td>{{ article.age }}</td>
-          <td>{{ article.weight }}</td>
+          <td><img src="{{ article.imageURL }}" alt="image-article"></td>
+          <td>{{ article.price }}</td>
           <td>
             <button class="btn btn-sm btn-primary" (click)="enableEditing(article)"><i class="fa fa-pencil"></i> Edit</button> 
             <button class="btn btn-sm btn-danger" (click)="deleteArticle(article)"><i class="fa fa-trash"></i> Delete</button>

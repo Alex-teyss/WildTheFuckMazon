@@ -29,6 +29,11 @@ export class AccountComponent implements OnInit {
     );
   }
 
+  addMoney() {
+    this.user.sold += 1;
+    console.log(this.user.sold);
+    }
+
   save(user: User) {
     this.userService.editUser(user).subscribe(
       res => this.toast.setMessage('account settings saved!', 'success'),

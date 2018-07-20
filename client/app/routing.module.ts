@@ -12,9 +12,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { AuthGuardLogin } from './services/auth-guard-login.service';
 import { AuthGuardAdmin } from './services/auth-guard-admin.service';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: AboutComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'articles', component: ArticlesComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
