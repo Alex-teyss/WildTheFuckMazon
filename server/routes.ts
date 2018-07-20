@@ -4,12 +4,14 @@ import CatCtrl from './controllers/cat';
 import UserCtrl from './controllers/user';
 import Cat from './models/cat';
 import User from './models/user';
+import ArticleCtrl from './controllers/article';
 
 export default function setRoutes(app) {
 
   const router = express.Router();
 
   const catCtrl = new CatCtrl();
+  const articleCtrl = new ArticleCtrl();
   const userCtrl = new UserCtrl();
 
   // Cats
@@ -19,6 +21,14 @@ export default function setRoutes(app) {
   router.route('/cat/:id').get(catCtrl.get);
   router.route('/cat/:id').put(catCtrl.update);
   router.route('/cat/:id').delete(catCtrl.delete);
+
+   // Articles
+   router.route('/articles').get(articleCtrl.getAll);
+   router.route('/articles/count').get(articleCtrl.count);
+   router.route('/article').post(articleCtrl.insert);
+   router.route('/article/:id').get(articleCtrl.get);
+   router.route('/article/:id').put(articleCtrl.update);
+   router.route('/article/:id').delete(articleCtrl.delete);
 
   // Users
   router.route('/login').post(userCtrl.login);

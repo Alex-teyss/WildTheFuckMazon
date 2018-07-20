@@ -12,8 +12,8 @@
           </a>
         </li>
         <li class="nav-item">
-          <a routerLink="/cats" class="nav-link" routerLinkActive="active">
-            <i class="fa fa-list"></i> Cats
+          <a routerLink="/articles" class="nav-link" routerLinkActive="active">
+            <i class="fa fa-list"></i> Admin
           </a>
         </li>
         <li class="nav-item">
@@ -31,11 +31,11 @@
             <i class="fa fa-user"></i> Account ({{auth.currentUser.username}})
           </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a routerLink="/admin" class="nav-link" routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
             <i class="fa fa-lock"></i> Admin
           </a>
-        </li>
+        </li> -->
         <li class="nav-item">
           <a routerLink="/logout" class="nav-link" routerLinkActive="active" *ngIf="auth.loggedIn">
             <i class="fa fa-sign-out"></i> Logout
